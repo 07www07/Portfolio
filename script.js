@@ -12,3 +12,5 @@ toggleButton.addEventListener('click', () => {
 closeButton.addEventListener('click', () => {
   navbarMenu.classList.remove('show');
 });
+
+

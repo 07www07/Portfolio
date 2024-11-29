@@ -14,7 +14,7 @@
     <!-- Navbar Toogle -->
     <nav class="navbar">
         <div class="navbar-brand">
-      
+         
           <button class="navbar-toggle" id="toggleButton">☰</button>
         </div>
       </nav>
@@ -22,11 +22,32 @@
       <div class="navbar-menu" id="navbarMenu">
         <button class="close-button" id="closeButton">&times;</button>
         <ul class="navbar-links">
-          <li><a href="#home">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><img src="./assests/home (1).png" alt="">    <a href="#home">Home</a></li>
+          <li><img src="./assests/user.png" alt="">    <a href="#aboutMe">About Me</a></li>
+          <li><img src="./assests/bag.png" alt="">    <a href="#projectSection">Projects</a></li>
+          <li><img src="./assests/email2.png" alt="">    <a href="#contact">Contact</a></li>
         </ul>
+
+        <div class="social-icon-toggle">
+
+        
+           <div class="sub-toggle">
+            <a href="https://github.com/07www07"><img src="assests/github-sign.png" alt="">  </a>
+            <p>https://github.com/07www07</p>
+          
+           </div>
+            
+           <div class="sub-toggle">
+            <a href="mailto:hsusanwin@gmail.com"><img src="assests/email.png" alt=""></a>
+            <p>hsusanwin@gmail.com</p>
+           </div>
+          
+           <div class="sub-toggle">
+            <a href="https://www.linkedin.com/in/hsu-san-win-875631201/"><img src="assests/linkedin (1).png" alt=""></a> <p>hsusanwin@gmail.com</p>
+           
+           </div>
+           
+        </div>
       </div>
     
 
@@ -38,9 +59,11 @@
       <!-- header -->
       <div class="header">
         <!--Navbar starts-->
+        <img src="./assests/SUNNYE.png" alt="">
           <div class="nav">
+          
             <ul>
-                <li><a href="">Home</a></li>
+                <li><a href="#home">Home</a></li>
                 <li><a href="#aboutMe">About me</a></li>
                 <li><a href="#projectSection">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
@@ -51,7 +74,7 @@
     <!--header ends -->
 
      <!---section start -->
-      <div class="section"  class="scroll-section" >
+      <div class="section"  class="scroll-section" id="home" >
         <div class="section-text">
             <h3>Welcome , I'm</h3>
             <h1>Hsu San Win</h1>
@@ -59,7 +82,7 @@
                 <p>a passionate web developer and a third-year cloud computing student from UCSY. I specialize in creating responsive, user-friendly websites and integrating cloud-based solutions to enhance functionality, I aim to build digital experiences that are both functional and visually appealing.</p>
             </div>
             <div class="section-button">
-                <button>Download CV</button>
+                <a href="./assests/Hsu_San_CV.pdf" download="Hsu San's CV"><button>Download CV</button></a>
                 <button><a href="#projectSection">Projects</a></button>
                </div>    
         </div>
@@ -248,10 +271,10 @@
                         <p>Reach out today to discuss on working projects together and start something amazing</p>
                         
                         <div class="social-icon">
-                            <img src="assests/github-sign.png" alt="">
-                            <img src="assests/email.png" alt="">
-                            <img src="assests/linkedin (1).png" alt="">
-                            <img src="" alt="">
+                            <a href="https://github.com/07www07"><img src="assests/github-sign.png" alt=""></a>
+                            <a href="mailto:hsusanwin@gmail.com"><img src="assests/email.png" alt=""></a>
+                            <a href="https://www.linkedin.com/in/hsu-san-win-875631201/"><img src="assests/linkedin (1).png" alt=""></a>
+                           
                         </div>
 
                        </div>
@@ -268,12 +291,12 @@
                                             <input type="text" name="email" required id="email" placeholder="user@gmail.com">
                                         </div>
                                 </div>
-                                <div class="message">
+                        <div class="message">
                                     
                         <p>Message</p>
-                        <input type="text" name="subject" required id="message" rows="4" placeholder="Write Message">
+                        <textarea type="text" name="subject" required id="message" rows="4" cols="30"placeholder="Write Message " style="resize: none;padding-top:20px;"></textarea>
                         <input type="hidden" name="_template" value="table">
-                        <input type="hidden" name="_next" value="">
+                        <input type="hidden" name="_next" value="thanks.html">
                         <input type="hidden" name="_captcha" value="false">
                         <button>Submit</button>
                                 </div>
@@ -283,7 +306,7 @@
 
                        <div class="sub-contact">
                         <h2>Let's Work together today</h2>
-                        <button>Start Project</button>
+                        <a href="#contact"><button>Start Project</button></a>
                        </div>
 
                        <div class="site-map">

@@ -18,29 +18,38 @@
 
 .container{
     padding: 8px;
-    margin: 4em 6em;
+    margin: 1em 6em;
 
 }
 
   .header{
     display: flex;
     animation: fadeIn 1.5s;
+    align-items: center;
   }
 
+  .header img{
+    width: 8em;
+  }
+
+.nav{
+    
+    align-items: center;
+    justify-content: center;
+}
 
 .nav ul{
  display: flex;
- gap: 30px;
+ gap: 27px;
  justify-content: space-between;
  align-items: center;
- margin-left:46em;
+ margin-left:41em;
 }
+
 
    
 .nav li{
     list-style-type:none;
-    
-  
 }
 
 .nav li a{
@@ -104,10 +113,29 @@
     width: 8em;
     font-size: 17px;
     font-weight: 600;
+    align-items: center;
+    
+  
 }
+
+.section-text .section-button button:hover{
+    transform: scale(1.01);
+   
+  
+}
+
+.section-text .section-button button img{
+    width: 1em;
+    margin-right:10px;
+    align-items: center;
+    
+}
+
 
 .section-text .section-button{
     margin-top: 20px;
+    align-items: center;
+
 }
 
 .section-text .section-button a{
@@ -278,7 +306,7 @@
     color: #FFF2F9;
     text-align: center;
     cursor: pointer;
-    margin: 5em 10em;
+    margin: 5em 11.5em;
 
 }
 
@@ -431,6 +459,7 @@
 .contact-form-grid .contact-form-detail textarea{
     padding: 10px;
     box-sizing: border-box; 
+    overflow-x: auto;
 }
 
 .sub-contact {
@@ -564,19 +593,26 @@
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
-    background-color: #2b2a2a;
+    background-color: #363636;
     color: white;
     position: relative;
     z-index: 1000;
-    width:28.5em;
+    width:28.55em;
+    align-items: center;
   }
   
   .navbar-brand h1 {
     margin: 0;
   }
-  
+
+  .navbar-brand {
+    align-items: center;
+  }
+
+
+ 
   .navbar-toggle {
-    font-size: 1rem;
+    font-size: 3rem;
     color: white;
     background: none;
     border: none;
@@ -591,7 +627,7 @@
     left: -100%; /* Start off-screen */
     height: 100%; /* Full height */
     width: 70%; /* Cover 70% of the screen */
-    background-color: #333;
+    background-color: #363636;
     color: white;
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
     transition: left 0.3s ease; /* Smooth slide-in effect */
@@ -599,7 +635,25 @@
     padding: 20px;
     overflow-y: auto; /* Add scrolling if content overflows */
   }
-  
+  .navbar-menu .social-icon-toggle{
+    margin-top: 21em;
+    gap: 2em;
+    width: 2em;
+    margin-left: 1em;
+  }
+  .navbar-menu .social-icon-toggle a{
+   text-decoration: none;
+   color: rgb(189, 188, 188);
+  }
+  .navbar-menu .social-icon-toggle .sub-toggle {
+    display: flex;
+    gap: 10px;
+    padding: 14px;
+    margin: 0px -10px;
+   }
+  .navbar-menu .social-icon-toggle img{
+    width: 1em;
+   }
   .navbar-menu.show {
     left: 0; /* Slide in */
   }
@@ -614,6 +668,7 @@
     position: absolute;
     top: 10px;
     right: 20px;
+    cursor: pointer;
   }
   
   /* Sidebar Links */
@@ -629,10 +684,13 @@
   .navbar-links li {
     margin: 0;
     padding: 10px;
+    align-items: center;
+    margin-left: 1em;
+    
     
   }
   .navbar-links li:hover{
-    background: #5c5b5c;
+    background: #727272;
     border: 1px solid #5c5b5c;
     border-radius: 8px;
   }
@@ -641,7 +699,15 @@
     text-decoration: none;
     color: white;
     font-size: 1.2rem;
+    align-items: center;
+    
   }
+   .navbar-links img{
+    align-items: center;
+    width: 1em;
+  
+   }
+
   
  
 
@@ -661,7 +727,7 @@
     }
     .section-text{
         width: 20em;
-        margin-left: 3em;
+        margin-left: 2em;
     }
     .section-text h3{
         color: #FFF2F9;
@@ -835,7 +901,7 @@
         }
      
         
-       
+     
         .about-me{
             display: grid;
             grid-template-columns: 1fr;
@@ -845,7 +911,7 @@
         
         }
         
-   
+        
      
         .code-demo .code-tool{
             display: grid;
@@ -863,6 +929,16 @@
             gap: 1em;
             
         }
+
+
+        .code-demo .code-tool .code-tool-container p{
+          text-align: left;
+        }
+
+        .code-demo .code-tool .code-tool-container {
+           padding: 1em;
+          }
+         
        
         .contact-me {
             width: 25.5em;
@@ -899,6 +975,10 @@
           .contact-form .message{
             padding: 20px;
           }
+          .contact-form .message textarea{
+            width: 21em;
+          }
+
           .contact-form-grid .contact-form-detail p,.contact-form p{
               margin-bottom:8px;
           }
@@ -916,9 +996,9 @@
         .contact-form button{
             display: flex;
             text-align: center;
-            width: 22em;
+            width: 21em;
             margin-left: 0em;
-            background-color: #FFF2F9;
+            background-color: #ffffff;
             border: none;
             color: #1b1b1b;
             justify-content: center;
