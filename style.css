@@ -61,6 +61,10 @@
     display: none;
 }
 
+.navbar,.navbar-brand,.navbar-menu{
+    display: none;
+}
+
 
 .section{
     display: grid;
@@ -546,14 +550,14 @@
  
 }
 
-.toggleMenu
-{display: none;}
 
 
 
 
 @media (max-width:750px) {
-
+    .navbar,.navbar-brand,.navbar-menu{
+        display: block;
+    }
     /* Navbar Styling */
 .navbar {
     display: flex;
@@ -564,6 +568,7 @@
     color: white;
     position: relative;
     z-index: 1000;
+    width:28.5em;
   }
   
   .navbar-brand h1 {
@@ -641,9 +646,9 @@
  
 
     
-    .container{
+.container{
         padding: 5px;
-        margin: 2em 2em;
+        margin: 4em 4em;
     }
     
    .header{
@@ -674,7 +679,12 @@
         margin-top: 1em;
         gap: 3em;
         font-weight: 600;
+        margin-left: 2em;
     
+    }
+
+    .about-me .education-card{
+        width: 20em;
     }
     
     .tech-skill{
@@ -698,15 +708,27 @@
         grid-template-columns: 1fr 1fr ;
         gap: 10px;
         
-        margin-left: 15px;
+        margin-left: 20px;
         margin-top:3em;
     
     }
-
+        .code-demo h2{
+         text-align: center;
+         margin-left: 2em;
+        }
+        .code-demo p{
+            font-size: 16px;
+            text-align: center;
+           
+            width: 25em;
+         
+        }
     .js-card{
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 1em;
+        width: 16em;
+        margin-left: 0.3em;
         
     }
     .js-card img{
@@ -743,12 +765,17 @@
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         width: 9em;
-    
+
+    }
+    .contact-me p{
+        width: 24em;
+      
     }
     .contact-form {
         border: 2px solid rgb(92, 27, 63);
-        padding: 17px;
+        padding: 16px;
         border-radius: 10px;
+        width: 23em;
         
     }
     .contact-form-grid{
@@ -758,16 +785,16 @@
         align-items: center;
         margin-bottom: 1em;
         gap: 1em;
-      
-       
+
       }
       
       .contact-form-grid .contact-form-detail p,.contact-form p{
           margin-bottom:8px;
       }
       .contact-form-grid .contact-form-detail input{
-          width: 25em;
+          width: 10em;
           height: 3em;
+          
         
       }
       .contact-form input{
@@ -775,45 +802,168 @@
         height: 9em;
         
     }
-    .contact-form button{
+    .contact-form .contact-form-grid button{
         display: flex;
         text-align: center;
-        width: 5em;
-        margin-left: 2em;
+        width: 23em;
+        margin-left: 0em;
         
     }
+
+
    .site-map {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        color: #FFF2F9;
-        align-items: center;
-        cursor: pointer;
-        gap: 1em;
-        margin: 0em 5em;
-
-    } 
+        display: none;
      
-    .site-map .site-map-link ul,.site-map .social-links ul{
-        flex-direction: column;
-        margin-left: 2px;
-      
+    } 
+    }
+
+
+    @media (max-width:650px) {
+
+        .navbar,.navbar-brand,.navbar-menu{
+            display: block;
+        }
         
-    }
-
-    .site-map .site-map-link ,.site-map .social-links {
-       margin-top: 1em;
-       margin-bottom: 1em;
-      
-    }
-   
-    .site-map .site-map-link li,.site-map .social-links li{
-       margin-bottom: 1px;
-       margin-top: 0px;
+     
+        .container{
+            padding: 5px;
+            margin: 2em 2em;
+        }
+        
+       .header{
+            display: none;
+        }
+     
+        
        
-     }
+        .about-me{
+            display: grid;
+            grid-template-columns: 1fr;
+            margin-top: 1em;
+            gap: 3em;
+            font-weight: 600;
+        
+        }
+        
+   
+     
+        .code-demo .code-tool{
+            display: grid;
+            grid-template-columns: 1fr 1fr ;
+            gap: 10px;
+            
+            margin-left: 15px;
+            margin-top:3em;
+        
+        }
+    
+        .js-card{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1em;
+            
+        }
+       
+        .contact-me {
+            width: 25.5em;
+        }
+        .contact-me h2{
+    
+            font-size: 35px;
+            background: linear-gradient(to left, #b1005e, #f5b7d8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            width: 9em;
+        
+        }
+        .contact-form {
+            border: 2px solid rgb(92, 27, 63);
+            padding: 17px;
+            border-radius: 10px;
+ 
+        }
 
-    }
+      
+        .contact-form-grid{
+            display: grid;
+            grid-template-columns: 1fr ;
+            color: white;
+            align-items: center;
+            margin-bottom: 0.3em;
+            gap: 1em;
+            padding: 20px;
+          
+           
+          }
+          
+          .contact-form .message{
+            padding: 20px;
+          }
+          .contact-form-grid .contact-form-detail p,.contact-form p{
+              margin-bottom:8px;
+          }
+          .contact-form-grid .contact-form-detail input{
+              width: 21em;
+              height: 3em;
+            
+          }
+          .contact-form input{
+            width: 22em;
+            height: 9em;
+          
+            
+        }
+        .contact-form button{
+            display: flex;
+            text-align: center;
+            width: 22em;
+            margin-left: 0em;
+            background-color: #FFF2F9;
+            border: none;
+            color: #1b1b1b;
+            justify-content: center;
+        }
+       .site-map {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            color: #FFF2F9;
+            align-items: center;
+            cursor: pointer;
+            gap: 0.2em;
+            margin: 0em 4em;
+            font-size: small;
+    
+        } 
+         
+        .site-map .site-map-link ul,.site-map .social-links ul{
+            flex-direction: column;
+            margin-left: 2px;
+            
+          
+            
+        }
+    
+        .site-map .site-map-link ,.site-map .social-links {
+           margin-top: 20px;
+           margin-bottom: 20px;
+          
+        }
+       
+        .site-map .site-map-link li,.site-map .social-links li{
+           margin-bottom: 0px;
+           margin-top: 8px;
+           
+         }
 
+       
+        .copyright p{
+            text-align: center;
+            margin-left: 6em;
+            font-size: 13px;
+        }
+
+        }
+ 
 @keyframes fadeIn {
     from {
         opacity: 0;
