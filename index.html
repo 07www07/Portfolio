@@ -9,6 +9,8 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" /></head>
 
     </head>
+
+   
     <body>
 
     <!-- Navbar Toogle -->
@@ -278,30 +280,34 @@
                         </div>
 
                        </div>
-                       <form action="https://formsubmit.co/hsusanwin@gmail.com" method="POST">
-                       <div class="contact-form" >
-                                <div class="contact-form-grid">
-                                        <div class="contact-form-detail">
-                                            <p>Name</p>
-                                            <input type="text" name="name" required id="name" placeholder="Name">
-                                        </div>
+                       <form action="https://api.web3forms.com/submit" method="POST">
+                        <input type="hidden" name="access_key" value="1a96dd86-7dbb-4ba9-afce-d22f336ae55a">
 
-                                        <div class="contact-form-detail">
-                                            <p>Email</p>
-                                            <input type="text" name="email" required id="email" placeholder="user@gmail.com">
-                                        </div>
-                                </div>
-                        <div class="message">
-                                    
-                        <p>Message</p>
-                        <textarea type="text" name="subject" required id="message" rows="4" cols="30"placeholder="Write Message " style="resize: none;padding-top:20px;"></textarea>
-                        <input type="hidden" name="_template" value="table">
-                        <input type="hidden" name="_next" value="thanks.html">
-                        <input type="hidden" name="_captcha" value="false">
-                        <button>Submit</button>
-                                </div>
-                       </div> 
-                    </form>
+                        <div class="contact-form" >
+                                 <div class="contact-form-grid">
+                                         <div class="contact-form-detail">
+                                             <p>Name</p>
+                                             <input type="text" name="name" autocomplete="off" required id="name" placeholder="Name">
+                                         </div>
+ 
+                                         <div class="contact-form-detail">
+                                             <p>Email</p>
+                                             <input type="email" name="email" autocomplete="off" required id="email" placeholder="user@gmail.com">
+                                         </div>
+                                 </div>
+                         <div class="message">
+                                     
+                         <p>Message</p>
+                         <textarea type="text" name="subject" autocomplete="off" required id="message" rows="4" cols="30"placeholder="Write Message " style="resize: none;padding-top:20px;"></textarea>
+                        
+                         <button type="submit" id="btn">Submit</button>
+                        
+                                 </div>
+                        </div> 
+                     </form>
+                    
+
+  
 
 
                        <div class="sub-contact">
@@ -343,6 +349,7 @@
      <script src="https://cdn.jsdelivr.net/npm/@motionone/dom"></script>
 
     <script src="script.js"></script>
+  
 
     </body>
 </html>
