@@ -6,24 +6,51 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="style.css" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" /></head>
+
     </head>
     <body>
+
+    <!-- Navbar Toogle -->
+    <nav class="navbar">
+        <div class="navbar-brand">
+      
+          <button class="navbar-toggle" id="toggleButton">☰</button>
+        </div>
+      </nav>
+      
+      <div class="navbar-menu" id="navbarMenu">
+        <button class="close-button" id="closeButton">&times;</button>
+        <ul class="navbar-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    
+
+
+
+
    <div class="container">
+
       <!-- header -->
       <div class="header">
-        <!-- Navbar starts-->
-         <div class="nav">
+        <!--Navbar starts-->
+          <div class="nav">
             <ul>
                 <li><a href="">Home</a></li>
                 <li><a href="#aboutMe">About me</a></li>
                 <li><a href="#projectSection">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
-         </div>
+         </div> 
            <!-- Navbar ends-->
     </div>
-    <!-- header ends -->
-     <!-- section start -->
+    <!--header ends -->
+
+     <!---section start -->
       <div class="section"  class="scroll-section" >
         <div class="section-text">
             <h3>Welcome , I'm</h3>
@@ -33,7 +60,7 @@
             </div>
             <div class="section-button">
                 <button>Download CV</button>
-                <button>Projects</button>
+                <button><a href="#projectSection">Projects</a></button>
                </div>    
         </div>
         <div class="seciton-img">
@@ -236,25 +263,28 @@
                         </div>
 
                        </div>
-
-                       <div class="contact-form">
+                       <form action="https://formsubmit.co/hsusanwin@gmail.com" method="POST">
+                       <div class="contact-form" >
                         <div class="contact-form-grid">
                             <div class="contact-form-detail">
                                 <p>Name</p>
-                                <input type="text" name="" id="" placeholder="Name">
+                                <input type="text" name="name" required id="name" placeholder="Name">
                             </div>
 
                             <div class="contact-form-detail">
                                 <p>Email</p>
-                                <input type="text" placeholder="user@gmail.com">
+                                <input type="text" name="email" required id="email" placeholder="user@gmail.com">
                             </div>
                         </div>
 
                         <p>Message</p>
-                        <input type="text" placeholder="Write Message">
-                          
+                        <input type="text" name="subject" required id="message" rows="4" placeholder="Write Message">
+                        <input type="hidden" name="_template" value="table">
+                        <input type="hidden" name="_next" value="">
+                        <input type="hidden" name="_captcha" value="false">
                         <button>Submit</button>
                        </div> 
+                    </form>
 
 
                        <div class="sub-contact">
@@ -286,9 +316,13 @@
            <!-- Contact end -->
             </div>
           </section>
+
+        
+
             <div class="copyright">
              <p>  Copyright  &copy; 2024 HSU SAN. All rights reserved.</p></p>
             </div>
+
      <script src="https://cdn.jsdelivr.net/npm/@motionone/dom"></script>
 
     <script src="script.js"></script>

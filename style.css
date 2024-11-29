@@ -11,9 +11,10 @@
 
   body{
     background-color: #1b1b1b;
+    overflow-x: hidden;
    
   }
-  
+
 
 .container{
     padding: 8px;
@@ -32,12 +33,13 @@
  gap: 30px;
  justify-content: space-between;
  align-items: center;
- margin-left:50em;
+ margin-left:46em;
 }
 
-
+   
 .nav li{
     list-style-type:none;
+    
   
 }
 
@@ -48,6 +50,17 @@
     color: #FFF2F9;
     
 }
+
+.nav li:hover{
+  
+  border-bottom: #b1005e;
+  border-bottom: 2px solid #b1005e;
+}
+
+#icon,#menu{
+    display: none;
+}
+
 
 .section{
     display: grid;
@@ -91,8 +104,11 @@
 
 .section-text .section-button{
     margin-top: 20px;
-    
-    
+}
+
+.section-text .section-button a{
+    text-decoration: none;
+    color: white;
 }
 
 .seciton-img img{
@@ -466,21 +482,24 @@
     color:white;
 }
 
-.contact-form input{
+.contact-form input,.contact-form textarea{
     width: 35em;
     height: 10em;
     border-radius: 5px;
-    border: none;
+    border: 0;
     background-color: #313131;
     color:#FFF2F9;
+    margin: 10px 0;
+    padding: 10px;
+    outline: none;
+  
+     
+
 
 }
 
 
-.contact-form input:focus {
-    border-color:none;   
-    color: #FFF2F9;
-}
+
 
 .contact-form button{
     border: 1px solid #FA4EAB;
@@ -488,13 +507,15 @@
     padding: 8px;
     color: #FFF2F9;
     border-radius: 5px;
-    width: 8em;
+    width: 35em;
     outline: none;
     margin-top: 20px;
     cursor: pointer;
 }
 
-
+.contact-form button:hover{
+    transform: scale(1.01);
+}
 
 
 .contact-form-grid ::placeholder{
@@ -517,20 +538,120 @@
     margin-bottom: 2em;
 }
 
+.blur img{
+   width: 10em;
+    margin-left: 2em;
+    display:flex;
+    background: transparent;
+ 
+}
+
+.toggleMenu
+{display: none;}
+
+
+
+
 @media (max-width:750px) {
+
+    /* Navbar Styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #2b2a2a;
+    color: white;
+    position: relative;
+    z-index: 1000;
+  }
+  
+  .navbar-brand h1 {
+    margin: 0;
+  }
+  
+  .navbar-toggle {
+    font-size: 1rem;
+    color: white;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 1100; /* Ensure button is above the menu */
+  }
+  
+  /* Sidebar Menu Styling */
+  .navbar-menu {
+    position: fixed;
+    top: 0;
+    left: -100%; /* Start off-screen */
+    height: 100%; /* Full height */
+    width: 70%; /* Cover 70% of the screen */
+    background-color: #333;
+    color: white;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+    transition: left 0.3s ease; /* Smooth slide-in effect */
+    z-index: 1000;
+    padding: 20px;
+    overflow-y: auto; /* Add scrolling if content overflows */
+  }
+  
+  .navbar-menu.show {
+    left: 0; /* Slide in */
+  }
+  
+  /* Close Button */
+  .close-button {
+    font-size: 2rem;
+    color: white;
+    background: none;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+  }
+  
+  /* Sidebar Links */
+  .navbar-links {
+    list-style: none;
+    padding: 0;
+    margin: 50px 0 0; /* Add space for the close button */
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .navbar-links li {
+    margin: 0;
+    padding: 10px;
+    
+  }
+  .navbar-links li:hover{
+    background: #5c5b5c;
+    border: 1px solid #5c5b5c;
+    border-radius: 8px;
+  }
+  
+  .navbar-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+  }
+  
+ 
+
+    
     .container{
         padding: 5px;
         margin: 2em 2em;
-    
     }
-    .nav ul{
-        display: flex;
-        gap:20px;
-        justify-content: space-between;
-        align-items: center;
-        margin-left:4em;
-       }
-       .section{
+    
+   .header{
+        display: none;
+    }
+ 
+    
+    .section{
          flex-direction: column;
     }
     .section-text{
@@ -549,12 +670,13 @@
     }
     .about-me{
         display: grid;
-        grid-template-columns: 1fr 1fr ;
+        grid-template-columns: 1fr;
         margin-top: 1em;
         gap: 3em;
         font-weight: 600;
     
     }
+    
     .tech-skill{
 
         display: flex;
@@ -689,14 +811,8 @@
        margin-top: 0px;
        
      }
-    
 
-
-
- 
-}
-
-
+    }
 
 @keyframes fadeIn {
     from {
@@ -708,5 +824,6 @@
         transform: translateY(0);
     }
 }
+
 
 
